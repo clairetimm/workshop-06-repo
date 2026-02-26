@@ -1,0 +1,18 @@
+---
+title: "test.quarto"
+author: "Claire Timm"
+date: "2026-02-20"
+format: html
+editor: visual
+---
+
+# set up 
+
+```{r}
+#reading in packages 
+library(tidyverse) #general use for data wrangling, cleaning, etc. 
+library(lterdatasampler) #package with LTER datasets 
+
+data(pie_crab) #extracting pie_crab dataset from LTER datasampler
+```
+
