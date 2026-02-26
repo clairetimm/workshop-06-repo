@@ -25,7 +25,11 @@ data(pie_crab) #extracting pie_crab dataset from LTER datasampler
 #| message: false
 ggplot(data = pie_crab, #dataset to plot
        aes(x = latitude, #x-axis is latitude
-           y = size)) + #y-axis is crab size
-  geom_point() #creating a scatterplot
+           y = size, #y-axis is crab size
+           color = site)) + #color by site
+  geom_point() + #creating a scatterplot 
+  theme_minimal() + #using a different theme
+  scale_color_viridis_d( #color sites with colors
+  )
 ```
 
