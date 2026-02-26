@@ -10,6 +10,7 @@ editor: visual
 
 ```{r}
 #| label: set up chunk
+#| message: false
 #reading in packages 
 library(tidyverse) #general use for data wrangling, cleaning, etc. 
 library(lterdatasampler) #package with LTER datasets 
@@ -21,9 +22,10 @@ data(pie_crab) #extracting pie_crab dataset from LTER datasampler
 
 ```{r}
 #| label: latitude size plot
-ggplot(data = pie_crab, 
-       aes(x = latitude, 
-           y = size)) + 
-  geom_point()
+#| message: false
+ggplot(data = pie_crab, #dataset to plot
+       aes(x = latitude, #x-axis is latitude
+           y = size)) + #y-axis is crab size
+  geom_point() #creating a scatterplot
 ```
 
